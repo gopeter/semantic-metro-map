@@ -1,0 +1,30 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+#wrapper {
+	padding: 20px;
+}
+
+#map {
+	float: left;
+}
+
+#sidebar {
+	float: right;
+}
