@@ -1,6 +1,6 @@
 # semantic-metro-map
 
-Little web app that let users interact with an interactive metro map. All data is included as triples in RDF/XML inside of the svg map. 
+Little web app that let users interact with an interactive metro map. All data are included as triples in RDF/XML in the SVG map.
 
 **No database, no unnecessary or redundant files, just one .svg.**
 
