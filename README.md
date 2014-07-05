@@ -12,3 +12,5 @@ Little web app that let users interact with an interactive metro map. All data a
     - [BeautifulSoup](http://www.crummy.com/software/BeautifulSoup/)
 2. Run `python app.py` and open `http://localhost:5000`
 3. Have fun!
+
+Be aware: Just a proof of concept. No validations, no exception handling, no tests.
