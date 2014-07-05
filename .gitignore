@@ -55,3 +55,6 @@ docs/_build/
 # PhpStorm files
 .idea
 
+# DS_Store
+.DS_Store
+
