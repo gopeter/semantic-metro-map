@@ -54,13 +54,20 @@ def parseData():
   length = nx.dijkstra_path_length(g, p_start, p_end, 'duration')
 
   # get egdes to the shortest path and return as JSON
-  results = []
+  details = []
   for edge in zip(path, path[1:]):
     data = g.get_edge_data(*edge)
-    results.append((edge, min(data.iteritems(), key=lambda x: x[1]['duration'])))
+    details.append({
+      'edge': edge,
+      'meta': min(data.iteritems(), key = lambda x: x[1]['duration'])
+    });
 
-  # return edges as json array
-  return json.dumps(results)
+  # return edges and metadata (duration, line) as json
+  data = {
+    'path': path,
+    'details': details
+  }
+  return json.dumps(data)
 
 ################################################################################
 # Serve maps

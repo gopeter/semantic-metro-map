@@ -4,16 +4,33 @@
 	<title>Semantic Metro Map</title>
 	<link type="text/css" href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
 	<script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/lunar.js') }}"></script>	
 	<script src="{{ url_for('static', filename='js/app.js') }}"></script>
 </head>
 
 <body>
 	<div id="wrapper">
-		<h1>Semantic Metro Map</h1>
-		<div id="content" class="clearfix">
-			<div id="map"></div>
-			<div id="sidebar"></div>
-		</div>
+
+		<header>
+			<h1>Semantic Metro Map</h1>
+			<h2>Select two stops and calculate the shortest way</h2>
+		</header>
+
+		<section class="clearfix">
+			<div id="sidebar">
+			  <h3>Chose a map</h3>
+			  <select>
+			    <option value="frankfurt">Frankfurt am Main</option>
+			    <option value="london">London</option>			    
+			  </select>
+				<div id="start"><strong>Start: </strong><span></span></div>
+				<div id="end"><strong>End: </strong><span></span></div>
+				<button id="calculate">Calculate route</button>
+				<button id="reset">Reset</button>				
+			</div>
+			<div id="map"></div>			
+		</section>
+		
 	</div>
 </body>
 
