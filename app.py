@@ -62,11 +62,13 @@ def parseData():
       'meta': min(data.iteritems(), key = lambda x: x[1]['duration'])
     });
 
-  # return edges and metadata (duration, line) as json
+  # return path and edges + metadata (duration, line) as details object
   data = {
     'path': path,
     'details': details
   }
+  
+  # return object as JSON
   return json.dumps(data)
 
 ################################################################################
