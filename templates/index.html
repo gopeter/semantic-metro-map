@@ -1,55 +1,58 @@
 <!doctype html>
 <html>
-<head>
-	<title>Semantic Metro Map</title>
-	<link type="text/css" href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
-	<script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
-	<script src="{{ url_for('static', filename='js/lunar.js') }}"></script>	
-	<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+<head>  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Semantic Metro Map</title>
+  <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">  
+  <link type="text/css" href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+  <script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/lunar.js') }}"></script> 
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
 </head>
-
 <body>
 
   <a href="https://github.com/gopeter/semantic-metro-map"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
 
-	<div id="wrapper">
+  <div id="wrapper">
 
-		<header>
-			<h1>Semantic Metro Map</h1>
-			<h2>Select two stops and calculate the shortest way</h2>
-		</header>
+    <header>
+      <h1>Semantic Metro Map</h1>
+      <h2>Select two stops and calculate the shortest way</h2>
+    </header>
 
-		<section class="clearfix">
-			<div id="sidebar">
-			  <h3>Chose a map</h3>
-			  <select>
-			    <option value="frankfurt">Frankfurt am Main</option>
-			    <option value="london">London</option>			    
-			  </select>
-				<div id="start"><strong>Start: </strong><span></span></div>
-				<div id="end"><strong>End: </strong><span></span></div>
-				<button id="calculate">Calculate route</button>
-				<button id="reset">Reset</button>				
-				<div id="timetable">
-				  <h4>Your timetable:</h4>
-				  <ol></ol>
-				  <strong>Total travel time: <span></span></strong>
-				</div>
-			</div>
-			<div id="map-wrapper">
-  			<div id="map"></div>
-  			<div id="legend">
-    			<ul>
-    			  <li data-line="1">Line 1</li>
-    			  <li data-line="2">Line 2</li>
-    			  <li data-line="3">Line 3</li>
-    			  <li data-line="4">Line 4</li>    			      			      			  
-    			</ul>
-  			</div>
-			</div>			
-		</section>
-		
-	</div>
+    <section class="clearfix">
+      <div id="sidebar">
+        <h3>Chose a map</h3>
+        <select>
+          <option value="frankfurt">Frankfurt am Main</option>
+          <option value="london">London</option>          
+        </select>
+        <div id="start"><strong>Start: </strong><span></span></div>
+        <div id="end"><strong>End: </strong><span></span></div>
+        <button id="calculate">Calculate route</button>
+        <button id="reset">Reset</button>       
+        <div id="timetable">
+          <h4>Your timetable:</h4>
+          <ol></ol>
+          <strong>Total travel time: <span></span></strong>
+        </div>
+      </div>
+      <div id="map-wrapper">
+        <div id="map"></div>
+        <div id="legend">
+          <ul>
+            <li data-line="1">Line 1</li>
+            <li data-line="2">Line 2</li>
+            <li data-line="3">Line 3</li>
+            <li data-line="4">Line 4</li>                                   
+          </ul>
+          <div>The numbers on the lines<br />represent the duration</div>
+        </div>
+      </div>      
+    </section>
+    
+  </div>
 </body>
 
 </html>
