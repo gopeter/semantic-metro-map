@@ -2,15 +2,17 @@
 
 Little web app that let users interact with an interactive metro map. All data are included as triples in RDF/XML in the SVG map.
 
+[Live demo on Heroku](http://semantic-metro-map.herokuapp.com) (runs with 1 dyno so first start could take a while)
+
 **No database, no unnecessary or redundant files, just one .svg.**
 
-## Usage
+## Installation
 
-1. Make sure you have Python and the following dependencies installed:
-    - [networkx](http://networkx.github.io/)
-    - [Flask](http://flask.pocoo.org/)
-    - [BeautifulSoup](http://www.crummy.com/software/BeautifulSoup/)
-2. Run `python app.py` and open `http://localhost:5000`
-3. Have fun!
+1. Clone this repository: `git clone git@github.com:gopeter/semantic-metro-map.git`
+2. Create virtual env: `virtualenv venv`
+3. Activate virtual env: `source venv/bin/activate` (do this for every new terminal session)
+4. Install requirements: `pip install -r requirements.txt`
+5. Start app: `foreman start`
+6. Visit `http://localhost:5000` and have fun!
 
 Be aware: Just a proof of concept. No validations, no exception handling, no tests.
