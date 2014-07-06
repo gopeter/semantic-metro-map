@@ -54,7 +54,7 @@ circle.active {
 #Edges line.result {
 	stroke-width: 2;
 	stroke-linecap: round;
-	stroke-dasharray: 1, 5;
+	stroke-dasharray: 1, 4;
 }
 
 #Nodes g:hover {
@@ -76,7 +76,7 @@ circle.active {
 #legend ul li:before {
   position: absolute;
   top: 4px;
-  left: -8px;
+  left: -10px;
   width: 6px;
   height: 6px;
   content: '';
