@@ -2,6 +2,7 @@ var SMM = function() {
   this.map = 'frankfurt.svg'; 
   this.start = null;
   this.end = null;
+  this.calculationDone = false;
   this.init();
 };
 
@@ -129,7 +130,7 @@ SMM.prototype = {
   
     var self = this;
   
-    if (this.start && this.end) {
+    if (this.start && this.end && !this.calculationDone) {
       $.ajax({
         url: '/',
         type: 'post',
@@ -179,11 +180,13 @@ SMM.prototype = {
           });
           $('#timetable').find('strong span').text(total_time + ' ' + self.minuteString(total_time));
           
+          self.calculationDone = true;
+          
         }
         
       }); 
-    } else {
-      alert('Chose start and end point.')
+    } else if (this.start && this.end && this.calculationDone) {
+      return false;
     }
     
     return false;
