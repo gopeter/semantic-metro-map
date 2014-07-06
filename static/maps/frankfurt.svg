@@ -111,65 +111,65 @@
   <g id="Edges">
   	<g>
   		<line fill="none" stroke="#E30613" stroke-width="2" stroke-miterlimit="10" x1="52" y1="174" x2="158" y2="174" id="AD2"/>
-  		<text transform="matrix(1 0 0 1 100 169)" fill="#E30613" font-family="'MyriadPro-Regular'" font-size="12">6</text>
+  		<text transform="matrix(1 0 0 1 100 169)" fill="#E30613" font-family="Arial" font-size="10">6</text>
   	</g>
   	<g>
   		<line fill="none" stroke="#1D71B8" stroke-width="2" stroke-miterlimit="10" x1="49" y1="178" x2="155" y2="178" id="AD4"/>
-  		<text transform="matrix(1 0 0 1 100 191)" fill="#1D71B8" font-family="'MyriadPro-Regular'" font-size="12">2</text>
+  		<text transform="matrix(1 0 0 1 100 191)" fill="#1D71B8" font-family="Arial" font-size="10">2</text>
   	</g>
   	<g>
   		<line fill="none" stroke="#1D71B8" stroke-width="2" stroke-miterlimit="10" x1="175" y1="315" x2="175" y2="183" id="AF4"/>
-  		<text transform="matrix(1 0 0 1 164 247)" fill="#1D71B8" font-family="'MyriadPro-Regular'" font-size="12">3</text>
+  		<text transform="matrix(1 0 0 1 164 247)" fill="#1D71B8" font-family="Arial" font-size="10">3</text>
   	</g>
   	<g>
   		<line fill="none" stroke="#F39200" stroke-width="2" stroke-miterlimit="10" x1="25" y1="191" x2="159.5" y2="325.5" id="DF3"/>
-  		<text transform="matrix(1 0 0 1 87 247)" fill="#F39200" font-family="'MyriadPro-Regular'" font-size="12">2</text>
+  		<text transform="matrix(1 0 0 1 87 247)" fill="#F39200" font-family="Arial" font-size="10">2</text>
   	</g>
   	<g>
   		<line fill="none" stroke="#F39200" stroke-width="2" stroke-miterlimit="10" x1="327.5" y1="189" x2="193" y2="323.5" id="BF3"/>
-  		<text transform="matrix(1 0 0 1 258 247)" fill="#F39200" font-family="'MyriadPro-Regular'" font-size="12">2</text>
+  		<text transform="matrix(1 0 0 1 258 247)" fill="#F39200" font-family="Arial" font-size="10">2</text>
   	</g>
   	<g>
   		<line fill="none" stroke="#008D36" stroke-width="2" stroke-miterlimit="10" x1="175" y1="153" x2="175" y2="21" id="AE1"/>
-  		<text transform="matrix(1 0 0 1 166 110)" fill="#008D36" font-family="'MyriadPro-Regular'" font-size="12">1</text>
+  		<text transform="matrix(1 0 0 1 166 110)" fill="#008D36" font-family="Arial" font-size="10">1</text>
   	</g>
   	<g>
   		<line fill="none" stroke="#008D36" stroke-width="2" stroke-miterlimit="10" x1="193" y1="170" x2="299" y2="170" id="AB1"/>
-  		<text transform="matrix(1 0 0 1 238 165)" fill="#008D36" font-family="'MyriadPro-Regular'" font-size="12">10</text>
+  		<text transform="matrix(1 0 0 1 238 165)" fill="#008D36" font-family="Arial" font-size="10">10</text>
   	</g>
   	<g>
   		<line fill="none" stroke="#E30613" stroke-width="2" stroke-miterlimit="10" x1="196" y1="174" x2="302" y2="174" id="AB2"/>
-  		<text transform="matrix(1 0 0 1 238 187)" fill="#E30613" font-family="'MyriadPro-Regular'" font-size="12">14</text>
+  		<text transform="matrix(1 0 0 1 238 187)" fill="#E30613" font-family="Arial" font-size="10">14</text>
   	</g>
   	<g>
   		<line fill="none" stroke="#E30613" stroke-width="2" stroke-miterlimit="10" x1="338" y1="174" x2="444" y2="174" id="BC2"/>
-  		<text transform="matrix(1 0 0 1 385 187)" fill="#E30613" font-family="'MyriadPro-Regular'" font-size="12">5</text>
+  		<text transform="matrix(1 0 0 1 385 187)" fill="#E30613" font-family="Arial" font-size="10">5</text>
   	</g>
   </g>
   <g id="Nodes">
   	<g id="StopD">
   		<circle fill="#FFFFFF" stroke="#1D1D1B" stroke-miterlimit="10" cx="31" cy="174" r="22"/>
-  		<text transform="matrix(1 0 0 1 26 180)" font-family="'MyriadPro-Regular'" font-size="16">D</text>
+  		<text transform="matrix(1 0 0 1 26 180)" font-family="Arial" font-size="14">D</text>
   	</g>
   	<g id="StopA">
   		<circle fill="#FFFFFF" stroke="#1D1D1B" stroke-miterlimit="10" cx="175" cy="174" r="22"/>
-  		<text transform="matrix(1 0 0 1 171 179)" font-family="'MyriadPro-Regular'" font-size="16">A</text>
+  		<text transform="matrix(1 0 0 1 171 179)" font-family="Arial" font-size="14">A</text>
   	</g>
   	<g id="StopB">
   		<circle fill="#FFFFFF" stroke="#1D1D1B" stroke-miterlimit="10" cx="319" cy="174" r="22"/>
-  		<text transform="matrix(1 0 0 1 315 179)" font-family="'MyriadPro-Regular'" font-size="16">B</text>
+  		<text transform="matrix(1 0 0 1 315 179)" font-family="Arial" font-size="14">B</text>
   	</g>
   	<g id="StopC">
   		<circle fill="#FFFFFF" stroke="#1D1D1B" stroke-miterlimit="10" cx="463" cy="174" r="22"/>
-  		<text transform="matrix(1 0 0 1 458 179)" font-family="'MyriadPro-Regular'" font-size="16">C</text>
+  		<text transform="matrix(1 0 0 1 458 179)" font-family="Arial" font-size="14">C</text>
   	</g>
   	<g id="StopF">
   		<circle fill="#FFFFFF" stroke="#1D1D1B" stroke-miterlimit="10" cx="175" cy="319" r="22"/>
-  		<text transform="matrix(1 0 0 1 171 325)" font-family="'MyriadPro-Regular'" font-size="16">F</text>
+  		<text transform="matrix(1 0 0 1 171 325)" font-family="Arial" font-size="14">F</text>
   	</g>
   	<g id="StopE">
   		<circle fill="#FFFFFF" stroke="#1D1D1B" stroke-miterlimit="10" cx="175" cy="31" r="22"/>
-  		<text transform="matrix(1 0 0 1 171 36)" font-family="'MyriadPro-Regular'" font-size="16">E</text>
+  		<text transform="matrix(1 0 0 1 171 36)" font-family="Arial" font-size="14">E</text>
   	</g>
   </g>
 </svg>
