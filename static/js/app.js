@@ -13,9 +13,10 @@ SMM.prototype = {
     this.loadMap();
   
     // event handler
-    $(document).on('click tap', '#Nodes g', $.proxy(this.clickNode,this));
-    $(document).on('click', '#calculate', $.proxy(this.calculate,this));    
-    $(document).on('click', '#reset', $.proxy(this.reset,this));    
+    $(document).hammer();
+    $(document).on('tap', '#Nodes g', $.proxy(this.clickNode,this));
+    $(document).on('tap', '#calculate', $.proxy(this.calculate,this));    
+    $(document).on('tap', '#reset', $.proxy(this.reset,this));    
     $(document).on('change', 'select', $.proxy(this.changeMap,this));            
       
   },
