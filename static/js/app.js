@@ -122,6 +122,8 @@ SMM.prototype = {
     $('#timetable').find('strong span').empty();     
     $('#timetable').hide();
     
+    this.calculationDone = false;
+    
     return false;       
             
   },
