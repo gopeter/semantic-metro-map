@@ -2,6 +2,7 @@ import networkx as nx
 import mimetypes
 import json
 from flask import Flask, jsonify, render_template, request
+from flask.ext.heroku import Heroku
 from bs4 import BeautifulSoup
 
 mimetypes.add_type('image/svg+xml', '.svg')
@@ -11,6 +12,7 @@ mimetypes.add_type('image/svg+xml', '.svg')
 ################################################################################
 
 app = Flask(__name__)
+heroku = Heroku(app)
 
 ################################################################################
 # Parse metro map and return shortest path
@@ -84,10 +86,3 @@ def maps(filename):
 @app.route('/', methods = ['GET'])
 def index():
   return render_template('index.html')
-
-################################################################################
-# Start app
-################################################################################
-
-if __name__ == '__main__':
-  app.run(debug=True)
