@@ -58,7 +58,7 @@ def parseData():
   for edge in zip(path, path[1:]):
     data = g.get_edge_data(*edge)
     details.append({
-      'edge': edge,
+      'edges': edge,
       'meta': min(data.iteritems(), key = lambda x: x[1]['duration'])
     });
 

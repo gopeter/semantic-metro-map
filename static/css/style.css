@@ -11,12 +11,13 @@ body {
 	font-family: 'Helvetica', 'Arial', sans-serif;
 	color: #454545;	
   background-color: #fefefe;	
+  font-size: 12px;
 }
 
 .clearfix:before,
 .clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+    content: " ";
+    display: table;
 }
 
 .clearfix:after {
@@ -41,16 +42,60 @@ header {
  * Map
  ***************************/
 
-circle.activeNode {
+#map {
+  float: left;
+}
+
+circle.active {
 	fill: #ccc;
 }
 
-circle.resultNode {
-	fill: #999;
+#Nodes circle.result,
+#Edges line.result {
+	stroke-width: 2;
+	stroke-linecap: round;
+	stroke-dasharray: 1, 5;
 }
 
 #Nodes g:hover {
 	cursor: pointer;
+}
+
+#legend {
+  float: left;
+}
+
+#legend ul {
+  list-style: none;
+}
+
+#legend ul li {
+  position: relative;
+}
+
+#legend ul li:before {
+  position: absolute;
+  top: 4px;
+  left: -8px;
+  width: 6px;
+  height: 6px;
+  content: '';
+}
+
+#legend ul li[data-line="1"]:before {
+  background-color: #008D36;
+}
+
+#legend ul li[data-line="2"]:before {
+  background-color: #E30613;
+}
+
+#legend ul li[data-line="3"]:before {
+  background-color: #F39200;
+}
+
+#legend ul li[data-line="4"]:before {
+  background-color: #1D71B8;
 }
 
 /****************************
@@ -102,4 +147,17 @@ button:hover {
 
 button:focus, button:active {
   outline: none;
+}
+
+#timetable {
+  margin: 20px 0 0 0;
+  display: none;
+}
+
+#timetable ol {
+  margin: 0 0 10px 16px;
+}
+
+#timetable li span {
+  color: #999;
 }
