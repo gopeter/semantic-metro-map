@@ -37,7 +37,6 @@ def parseData():
 
       # get start node and strip 'http://example.com/' from string
       start = (item['rdf:about'])[19:]
-      nodes = {}
 
       # get connectsd nodes/objects
       for node in item.findAll('ex:via'):
