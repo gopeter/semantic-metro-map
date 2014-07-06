@@ -58,3 +58,6 @@ docs/_build/
 # DS_Store
 .DS_Store
 
+# VENV
+venv
+*.pyc
