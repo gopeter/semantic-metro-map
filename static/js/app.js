@@ -123,9 +123,7 @@ SMM.prototype = {
     $('#timetable').find('strong span').empty();     
     $('#timetable').hide();
     
-    this.calculationDone = false;
-    
-    return false;       
+    this.calculationDone = false;    
             
   },
   
@@ -191,8 +189,6 @@ SMM.prototype = {
     } else if (this.start && this.end && this.calculationDone) {
       return false;
     }
-    
-    return false;
     
   }
   
