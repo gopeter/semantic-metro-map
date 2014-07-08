@@ -16,3 +16,11 @@ Little web app that let users interact with an interactive metro map. All data a
 6. Visit `http://localhost:5000` and have fun!
 
 Be aware: Just a proof of concept. No validations, no exception handling, no tests.
+
+## Further examples
+
+`semantic-graphics` is part of a series of experiments
+
+- [`semantic-diagrams`](https://github.com/gopeter/semantic-diagrams)
+- [`semantic-graphics`](https://github.com/gopeter/semantic-graphics)
+- [`semantic-metro-map`](https://github.com/gopeter/semantic-metro-map)
