@@ -239,7 +239,7 @@ SMM.prototype = {
           
           // animate elements in turn
           var s = Snap('svg');
-          var t = 300;
+          var t = 500;
           for (var j = 0; j < animateElements.length; j++) {
             self.animateElement(animateElements, j, t, s);
           }
