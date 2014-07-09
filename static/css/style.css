@@ -54,11 +54,11 @@ circle.active {
 	fill: #ccc;
 }
 
-#Nodes circle.result,
-#Edges line.result {
+#Nodes circle,
+#Edges line {
 	stroke-width: 2;
 	stroke-linecap: round;
-	stroke-dasharray: 1, 4;
+	stroke-dasharray: 0, 0;
 }
 
 #Nodes g:hover {

@@ -47,6 +47,53 @@ SMM.prototype = {
     }, 'xml');  
     
   },  
+  
+  getLengthOfSVGElement: function(el) {
+    var l;
+  
+    /* metro maps are described with paths, lines and circles only */
+    if (el.tagName == 'path') {
+    
+      l = el.getTotalLength();
+      
+    } else if (el.tagName == 'line') {
+    
+      var b = el.getBBox();      
+      if (b.height == 0) {
+        l = b.width;
+      } else {
+        // Pythagorean theorem
+        l = Math.sqrt(Math.pow(b.width, 2) + Math.pow(b.height, 2));
+      }
+      
+    } else if (el.tagName == 'circle') {
+    
+      var r = $(el).attr('r');
+      l = r * 2 * Math.PI;
+      
+    }
+    
+    return l;
+  },
+  
+  animateElement: function(animateElements, j, t, s) {
+  
+    var self = this;
+    var el = '#' + $(animateElements[j]).attr('id');
+    var distance = 7;
+    
+    setTimeout(function() {
+      
+      var length = self.getLengthOfSVGElement($(el)[0]);
+      var f = (length / 2) / distance;    
+    
+      Snap.animate(0,distance, function( value ) {        
+        s.select(el).attr({'stroke-dasharray': '4,' + value, 'stroke-dashoffset': (f * value) * 0.75});
+      }, t);
+         
+    }, j * t);            
+    
+  },
 
   /***************************************
   * Events
@@ -98,20 +145,25 @@ SMM.prototype = {
   
     this.start = null;
     this.end = null;  
+
+    var s = Snap('svg');    
     
     $('#Nodes circle').each(function() {   
       if (lunar.hasClass($(this)[0], 'active')) {
         lunar.removeClass($(this)[0], 'active');          
       }
-      if (lunar.hasClass($(this)[0], 'result')) {
-        lunar.removeClass($(this)[0], 'result');          
-      }      
+      
+      $(this).css({
+        'stroke-dasharray':'0,0',
+        'stroke-dashoffset':0
+      });
     });
-    
+  
     $('#Edges line').each(function() {   
-      if (lunar.hasClass($(this)[0], 'result')) {
-        lunar.removeClass($(this)[0], 'result');          
-      }
+      $(this).css({
+        'stroke-dasharray':'0,0',
+        'stroke-dashoffset':0
+      });
     });    
     
     $('#start').hide().find('span').text('');       
@@ -144,18 +196,19 @@ SMM.prototype = {
         success: function(res) {
           var path = res.path;
           var details = res.details;
+
+          var description = [];        
+          var total_time = 0;          
+          var nodes = [];
+          var edges = [];          
         
-          // add active class to used nodes
+          // get active nodes as objects
           $.each(path, function(i, obj) {
-            var node = $('#' + obj).find('circle')[0];
-            lunar.addClass(node, 'result');                                   
+            var node = $('#' + obj).find('circle').attr({'id':'Circle' + obj})[0];
+            nodes.push(node);
           });
         
-          // create string that tells the user what line(s) he should take and calculate the total travel time
-          var description = [];        
-          var total_time = 0;
-        
-          // add active class to used edges
+          // get active edges as objects
           $.each(details, function(i, obj) {
             
             // append string that describes the route form point X to Y
@@ -170,9 +223,26 @@ SMM.prototype = {
             var nodes = self.sortArray([obj.edges[0].substring(4), obj.edges[1].substring(4)]);         
             var edge = nodes.join('') + obj.meta[1]['line'].substring(4);
             
-            lunar.addClass($('#' + edge)[0], 'result');                    
+            edges.push($('#' + edge)[0]);                 
             
           });
+          
+          // create array of nodes and edges to animate them in the correct order
+          var animateElements = []
+          for (var i = 0; i < path.length; i++) {          
+            animateElements.push(nodes[i]);  
+            
+            if (i < path.length - 1) {
+              animateElements.push(edges[i]);
+            }
+          }
+          
+          // animate elements in turn
+          var s = Snap('svg');
+          var t = 300;
+          for (var j = 0; j < animateElements.length; j++) {
+            self.animateElement(animateElements, j, t, s);
+          }
           
           // fill timetable
           $('#timetable').show();
