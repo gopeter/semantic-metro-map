@@ -1,5 +1,6 @@
 var SMM = function() {
   this.map = 'frankfurt.svg'; 
+  this.ownMap = null;
   this.start = null;
   this.end = null;
   this.calculationDone = false;
@@ -38,9 +39,17 @@ SMM.prototype = {
     return arr;
   },
   
-  loadMap: function() {
+  loadMap: function(file) {
   
-    $.get('maps/' + this.map, null, function(data) {
+    var map;
+  
+    if (file) {
+      map = file;      
+    } else {
+      map = 'maps/' + this.map;
+    }
+  
+    $.get(map, null, function(data) {
       var el = $('svg', data);
       var svg = document.adoptNode(el[0]);
       $('#map').html(svg);
@@ -136,8 +145,23 @@ SMM.prototype = {
   
   changeMap: function(el) {
     var val = $(el.target).val();
-    this.map = val + '.svg';
-    this.loadMap();
+    
+    if (val == 'own') {
+    
+      var map = prompt("Insert URL to your SVG file", "");
+      this.ownMap = map;
+      this.loadMap(map);
+      $('#legend').hide();
+      
+    } else {
+      
+      this.map = val + '.svg';
+      this.ownMap = null;      
+      this.loadMap();
+      $('#legend').show();      
+      
+    }
+    
     this.reset();
   },
   
@@ -184,11 +208,14 @@ SMM.prototype = {
     var self = this;
   
     if (this.start && this.end && !this.calculationDone) {
+    
+      var map = (self.ownMap) ? self.ownMap : self.map;
+    
       $.ajax({
         url: '/',
         type: 'post',
         data: {
-          map: self.map,
+          map: map,
           start: self.start,
           end: self.end
         },  
@@ -204,7 +231,7 @@ SMM.prototype = {
         
           // get active nodes as objects
           $.each(path, function(i, obj) {
-            var node = $('#' + obj).find('circle').attr({'id':'Circle' + obj})[0];
+            var node = $('#Node' + obj).find('circle').attr({'id':'Circle' + obj})[0];
             nodes.push(node);
           });
         
@@ -223,7 +250,7 @@ SMM.prototype = {
             var nodes = self.sortArray([obj.edges[0], obj.edges[1]]);         
             var edge = nodes.join('') + obj.meta[1]['line'];
             
-            edges.push($('#' + edge)[0]);                 
+            edges.push($('#Edge' + edge)[0]);                 
             
           });
           

@@ -2,6 +2,8 @@ import os
 import networkx as nx
 import mimetypes
 import json
+import urllib
+from urlparse import urlparse
 from flask import Flask, jsonify, render_template, request
 from bs4 import BeautifulSoup
 
@@ -26,8 +28,16 @@ def parseData():
   p_start = request.form['start']
   p_end = request.form['end']    
   
+  check = urlparse(p_map)
+  if (check.scheme):
+    filename = 'static/maps/own.svg'  
+    ownmap = urllib.URLopener()
+    ownmap.retrieve(p_map,filename)
+  else:
+    filename = 'static/maps/' + p_map
+  
   # open SVG file and extract RDF
-  with open('static/maps/' + p_map, 'r') as metro:
+  with open(filename, 'r') as metro:
     data = metro.read()
     xml = BeautifulSoup(data)
     metadata = xml.find('metadata')
@@ -92,4 +102,4 @@ def index():
 ################################################################################
  
 if __name__ == '__main__':
-  app.run()
+  app.run(debug=True)
