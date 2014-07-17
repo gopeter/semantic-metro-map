@@ -61,3 +61,5 @@ docs/_build/
 # VENV
 venv
 *.pyc
+
+static/maps/own.svg
