@@ -24,3 +24,4 @@ Be aware: Just a proof of concept. No validations, no exception handling, no tes
 - [`semantic-diagrams`](https://github.com/gopeter/semantic-diagrams)
 - [`semantic-graphics`](https://github.com/gopeter/semantic-graphics)
 - [`semantic-metro-map`](https://github.com/gopeter/semantic-metro-map)
+- [`semantic-metro-map-generator`](https://github.com/gopeter/semantic-metro-map-generator)
