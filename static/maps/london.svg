@@ -110,39 +110,39 @@
 	</metadata>	 
   <g id="Edges">
   	<g>
-  		<line fill="none" stroke="#E30613" stroke-width="2" stroke-miterlimit="10" x1="52" y1="174" x2="158" y2="174" id="AD2"/>
+  		<line fill="none" stroke="#E30613" stroke-width="2" stroke-miterlimit="10" x1="52" y1="174" x2="158" y2="174" id="StopAStopDLine2"/>
   		<text transform="matrix(1 0 0 1 100 169)" fill="#E30613" font-family="Arial" font-size="10">6</text>
   	</g>
   	<g>
-  		<line fill="none" stroke="#1D71B8" stroke-width="2" stroke-miterlimit="10" x1="49" y1="178" x2="155" y2="178" id="AD4"/>
+  		<line fill="none" stroke="#1D71B8" stroke-width="2" stroke-miterlimit="10" x1="49" y1="178" x2="155" y2="178" id="StopAStopDLine4"/>
   		<text transform="matrix(1 0 0 1 100 191)" fill="#1D71B8" font-family="Arial" font-size="10">2</text>
   	</g>
   	<g>
-  		<line fill="none" stroke="#1D71B8" stroke-width="2" stroke-miterlimit="10" x1="175" y1="315" x2="175" y2="183" id="AF4"/>
+  		<line fill="none" stroke="#1D71B8" stroke-width="2" stroke-miterlimit="10" x1="175" y1="315" x2="175" y2="183" id="StopAStopFLine4"/>
   		<text transform="matrix(1 0 0 1 164 247)" fill="#1D71B8" font-family="Arial" font-size="10">3</text>
   	</g>
   	<g>
-  		<line fill="none" stroke="#F39200" stroke-width="2" stroke-miterlimit="10" x1="25" y1="191" x2="159.5" y2="325.5" id="DF3"/>
+  		<line fill="none" stroke="#F39200" stroke-width="2" stroke-miterlimit="10" x1="25" y1="191" x2="159.5" y2="325.5" id="StopDStopFLine3"/>
   		<text transform="matrix(1 0 0 1 87 247)" fill="#F39200" font-family="Arial" font-size="10">2</text>
   	</g>
   	<g>
-  		<line fill="none" stroke="#F39200" stroke-width="2" stroke-miterlimit="10" x1="327.5" y1="189" x2="193" y2="323.5" id="BF3"/>
+  		<line fill="none" stroke="#F39200" stroke-width="2" stroke-miterlimit="10" x1="327.5" y1="189" x2="193" y2="323.5" id="StopBStopFLine3"/>
   		<text transform="matrix(1 0 0 1 258 247)" fill="#F39200" font-family="Arial" font-size="10">2</text>
   	</g>
   	<g>
-  		<line fill="none" stroke="#008D36" stroke-width="2" stroke-miterlimit="10" x1="175" y1="153" x2="175" y2="21" id="AE1"/>
+  		<line fill="none" stroke="#008D36" stroke-width="2" stroke-miterlimit="10" x1="175" y1="153" x2="175" y2="21" id="StopAStopELine1"/>
   		<text transform="matrix(1 0 0 1 166 110)" fill="#008D36" font-family="Arial" font-size="10">1</text>
   	</g>
   	<g>
-  		<line fill="none" stroke="#008D36" stroke-width="2" stroke-miterlimit="10" x1="193" y1="170" x2="299" y2="170" id="AB1"/>
+  		<line fill="none" stroke="#008D36" stroke-width="2" stroke-miterlimit="10" x1="193" y1="170" x2="299" y2="170" id="StopAStopBLine1"/>
   		<text transform="matrix(1 0 0 1 238 165)" fill="#008D36" font-family="Arial" font-size="10">2</text>
   	</g>
   	<g>
-  		<line fill="none" stroke="#E30613" stroke-width="2" stroke-miterlimit="10" x1="196" y1="174" x2="302" y2="174" id="AB2"/>
+  		<line fill="none" stroke="#E30613" stroke-width="2" stroke-miterlimit="10" x1="196" y1="174" x2="302" y2="174" id="StopAStopBLine2"/>
   		<text transform="matrix(1 0 0 1 238 187)" fill="#E30613" font-family="Arial" font-size="10">1</text>
   	</g>
   	<g>
-  		<line fill="none" stroke="#E30613" stroke-width="2" stroke-miterlimit="10" x1="338" y1="174" x2="444" y2="174" id="BC2"/>
+  		<line fill="none" stroke="#E30613" stroke-width="2" stroke-miterlimit="10" x1="338" y1="174" x2="444" y2="174" id="StopBStopCLine2"/>
   		<text transform="matrix(1 0 0 1 385 187)" fill="#E30613" font-family="Arial" font-size="10">5</text>
   	</g>
   </g>

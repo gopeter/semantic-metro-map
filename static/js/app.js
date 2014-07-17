@@ -118,12 +118,12 @@ SMM.prototype = {
       } else if (this.start == null) {
       
         this.start = id;
-        $('#start').show().find('span').text(id.substring(4));
+        $('#start').show().find('span').text(id);
         
       } else {
       
         this.end = id;
-        $('#end').show().find('span').text(id.substring(4));       
+        $('#end').show().find('span').text(id);       
         
         $('#calculate').show();
         $('#reset').show();             
@@ -212,7 +212,7 @@ SMM.prototype = {
           $.each(details, function(i, obj) {
             
             // append string that describes the route form point X to Y
-            var str = 'Go from ' + obj.edges[0].substring(4) + ' to ' + obj.edges[1].substring(4) + ' with Line ' + obj.meta[1]['line'].substring(4) + ' <br /><span>' + obj.meta[1]['duration'] + ' ' + self.minuteString(obj.meta[1]['duration']) + '</span>';            
+            var str = 'Go from ' + obj.edges[0] + ' to ' + obj.edges[1] + ' with Line ' + obj.meta[1]['line'] + ' <br /><span>' + obj.meta[1]['duration'] + ' ' + self.minuteString(obj.meta[1]['duration']) + '</span>';            
             description.push(str);                
             
             // calculate the total travel time
@@ -220,8 +220,8 @@ SMM.prototype = {
             
             // create string that matches the ID of the edge between two stops (e.g. 'AB2') to add active class
             // sort nodes alphabetically because edges are described this way (e.g. 'AB2' and not 'BA2')
-            var nodes = self.sortArray([obj.edges[0].substring(4), obj.edges[1].substring(4)]);         
-            var edge = nodes.join('') + obj.meta[1]['line'].substring(4);
+            var nodes = self.sortArray([obj.edges[0], obj.edges[1]]);         
+            var edge = nodes.join('') + obj.meta[1]['line'];
             
             edges.push($('#' + edge)[0]);                 
             
