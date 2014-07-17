@@ -4,6 +4,8 @@ Little web app that let users interact with an interactive metro map. All data a
 
 [Live demo on Heroku](http://semantic-metro-map.herokuapp.com) (runs with 1 dyno so first start could take a while)
 
+Create your own semantic SVG file with the [`semantic-metro-map-generator`](https://github.com/gopeter/semantic-metro-map-generator).
+
 **No database, no unnecessary or redundant files, just one .svg.**
 
 ## Installation
