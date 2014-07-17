@@ -127,12 +127,12 @@ SMM.prototype = {
       } else if (this.start == null) {
       
         this.start = id;
-        $('#start').show().find('span').text(id);
+        $('#start').show().find('span').text(id.substring(4));
         
       } else {
       
         this.end = id;
-        $('#end').show().find('span').text(id);       
+        $('#end').show().find('span').text(id.substring(4));       
         
         $('#calculate').show();
         $('#reset').show();             
@@ -280,6 +280,9 @@ SMM.prototype = {
           
           self.calculationDone = true;
           
+        }, error: function() {
+          alert('Route not possible');
+          self.reset();
         }
         
       }); 

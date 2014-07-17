@@ -58,10 +58,10 @@ def parseData():
         g.add_edges_from([(start, stop, {'duration': duration, 'line': line})])
 
   # get shortest path
-  path = nx.dijkstra_path(g, p_start, p_end, 'duration')
+  path = nx.dijkstra_path(g, p_start[4:], p_end[4:], 'duration')
 
   # get total duration
-  length = nx.dijkstra_path_length(g, p_start, p_end, 'duration')
+  length = nx.dijkstra_path_length(g, p_start[4:], p_end[4:], 'duration')
 
   # get egdes to the shortest path and return as JSON
   details = []
@@ -102,4 +102,4 @@ def index():
 ################################################################################
  
 if __name__ == '__main__':
-  app.run(debug=True)
+  app.run()

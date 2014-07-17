@@ -114,60 +114,60 @@
   		<text transform="matrix(1 0 0 1 100 169)" fill="#E30613" font-family="Arial" font-size="10">6</text>
   	</g>
   	<g>
-  		<line fill="none" stroke="#1D71B8" stroke-width="2" stroke-miterlimit="10" x1="49" y1="178" x2="155" y2="178" id="StopAStopDLine4"/>
+  		<line fill="none" stroke="#1D71B8" stroke-width="2" stroke-miterlimit="10" x1="49" y1="178" x2="155" y2="178" id="EdgeStopAStopDLine4"/>
   		<text transform="matrix(1 0 0 1 100 191)" fill="#1D71B8" font-family="Arial" font-size="10">2</text>
   	</g>
   	<g>
-  		<line fill="none" stroke="#1D71B8" stroke-width="2" stroke-miterlimit="10" x1="175" y1="315" x2="175" y2="183" id="StopAStopFLine4"/>
+  		<line fill="none" stroke="#1D71B8" stroke-width="2" stroke-miterlimit="10" x1="175" y1="315" x2="175" y2="183" id="EdgeStopAStopFLine4"/>
   		<text transform="matrix(1 0 0 1 164 247)" fill="#1D71B8" font-family="Arial" font-size="10">3</text>
   	</g>
   	<g>
-  		<line fill="none" stroke="#F39200" stroke-width="2" stroke-miterlimit="10" x1="25" y1="191" x2="159.5" y2="325.5" id="StopDStopFLine3"/>
+  		<line fill="none" stroke="#F39200" stroke-width="2" stroke-miterlimit="10" x1="25" y1="191" x2="159.5" y2="325.5" id="EdgeStopDStopFLine3"/>
   		<text transform="matrix(1 0 0 1 87 247)" fill="#F39200" font-family="Arial" font-size="10">2</text>
   	</g>
   	<g>
-  		<line fill="none" stroke="#F39200" stroke-width="2" stroke-miterlimit="10" x1="327.5" y1="189" x2="193" y2="323.5" id="StopBStopFLine3"/>
+  		<line fill="none" stroke="#F39200" stroke-width="2" stroke-miterlimit="10" x1="327.5" y1="189" x2="193" y2="323.5" id="EdgeStopBStopFLine3"/>
   		<text transform="matrix(1 0 0 1 258 247)" fill="#F39200" font-family="Arial" font-size="10">2</text>
   	</g>
   	<g>
-  		<line fill="none" stroke="#008D36" stroke-width="2" stroke-miterlimit="10" x1="175" y1="153" x2="175" y2="21" id="StopAStopELine1"/>
+  		<line fill="none" stroke="#008D36" stroke-width="2" stroke-miterlimit="10" x1="175" y1="153" x2="175" y2="21" id="EdgeStopAStopELine1"/>
   		<text transform="matrix(1 0 0 1 166 110)" fill="#008D36" font-family="Arial" font-size="10">1</text>
   	</g>
   	<g>
-  		<line fill="none" stroke="#008D36" stroke-width="2" stroke-miterlimit="10" x1="193" y1="170" x2="299" y2="170" id="StopAStopBLine1"/>
+  		<line fill="none" stroke="#008D36" stroke-width="2" stroke-miterlimit="10" x1="193" y1="170" x2="299" y2="170" id="EdgeStopAStopBLine1"/>
   		<text transform="matrix(1 0 0 1 238 165)" fill="#008D36" font-family="Arial" font-size="10">10</text>
   	</g>
   	<g>
-  		<line fill="none" stroke="#E30613" stroke-width="2" stroke-miterlimit="10" x1="196" y1="174" x2="302" y2="174" id="StopAStopBLine2"/>
+  		<line fill="none" stroke="#E30613" stroke-width="2" stroke-miterlimit="10" x1="196" y1="174" x2="302" y2="174" id="EdgeStopAStopBLine2"/>
   		<text transform="matrix(1 0 0 1 238 187)" fill="#E30613" font-family="Arial" font-size="10">14</text>
   	</g>
   	<g>
-  		<line fill="none" stroke="#E30613" stroke-width="2" stroke-miterlimit="10" x1="338" y1="174" x2="444" y2="174" id="StopBStopCLine2"/>
+  		<line fill="none" stroke="#E30613" stroke-width="2" stroke-miterlimit="10" x1="338" y1="174" x2="444" y2="174" id="EdgeStopBStopCLine2"/>
   		<text transform="matrix(1 0 0 1 385 187)" fill="#E30613" font-family="Arial" font-size="10">5</text>
   	</g>
   </g>
   <g id="Nodes">
-  	<g id="StopD">
+  	<g id="NodeStopD">
   		<circle fill="#FFFFFF" stroke="#1D1D1B" stroke-miterlimit="10" cx="31" cy="174" r="22"/>
   		<text transform="matrix(1 0 0 1 26 180)" font-family="Arial" font-size="14">D</text>
   	</g>
-  	<g id="StopA">
+  	<g id="NodeStopA">
   		<circle fill="#FFFFFF" stroke="#1D1D1B" stroke-miterlimit="10" cx="175" cy="174" r="22"/>
   		<text transform="matrix(1 0 0 1 171 179)" font-family="Arial" font-size="14">A</text>
   	</g>
-  	<g id="StopB">
+  	<g id="NodeStopB">
   		<circle fill="#FFFFFF" stroke="#1D1D1B" stroke-miterlimit="10" cx="319" cy="174" r="22"/>
   		<text transform="matrix(1 0 0 1 315 179)" font-family="Arial" font-size="14">B</text>
   	</g>
-  	<g id="StopC">
+  	<g id="NodeStopC">
   		<circle fill="#FFFFFF" stroke="#1D1D1B" stroke-miterlimit="10" cx="463" cy="174" r="22"/>
   		<text transform="matrix(1 0 0 1 458 179)" font-family="Arial" font-size="14">C</text>
   	</g>
-  	<g id="StopF">
+  	<g id="NodeStopF">
   		<circle fill="#FFFFFF" stroke="#1D1D1B" stroke-miterlimit="10" cx="175" cy="319" r="22"/>
   		<text transform="matrix(1 0 0 1 171 325)" font-family="Arial" font-size="14">F</text>
   	</g>
-  	<g id="StopE">
+  	<g id="NodeStopE">
   		<circle fill="#FFFFFF" stroke="#1D1D1B" stroke-miterlimit="10" cx="175" cy="31" r="22"/>
   		<text transform="matrix(1 0 0 1 171 36)" font-family="Arial" font-size="14">E</text>
   	</g>
