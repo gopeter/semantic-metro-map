@@ -11,12 +11,6 @@ import logging
 
 log = logging.getLogger('logentries')
 log.setLevel(logging.INFO)
-test = LogentriesHandler(LOGENTRIES_TOKEN)
-
-log.addHandler(test)
-
-log.warn("Warning message")
-log.info("Info message")
 
 mimetypes.add_type('image/svg+xml', '.svg')
 
