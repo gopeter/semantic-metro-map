@@ -264,7 +264,6 @@ SMM.prototype = {
             animateElements.push(nodes[i]);  
             
             if (i < path.length - 1) {
-              console.log(edges[i]);
               animateElements.push(edges[i]);
             }
           }
