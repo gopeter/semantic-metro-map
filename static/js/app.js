@@ -210,6 +210,7 @@ SMM.prototype = {
   calculate: function() {
   
     var self = this;
+    var $spinner = $('.spinner');
   
     if (this.start && this.end && !this.calculationDone) {
     
@@ -224,7 +225,15 @@ SMM.prototype = {
           end: self.end
         },  
         dataType: 'json',
+        beforeSend: function() {
+          $spinner.addClass('show');
+        },
         success: function(res) {
+        
+          setTimeout(function() {
+            $spinner.removeClass('show')
+          }, 500);
+        
           var path = res.path;
           var details = res.details;
 
