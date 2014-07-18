@@ -39,6 +39,10 @@ SMM.prototype = {
     return arr;
   },
   
+  removeSpecialChars: function(str) {
+    return str.replace(/[^\w]/gi, ''); 
+  },  
+  
   loadMap: function(file) {
   
     var map;
@@ -231,7 +235,7 @@ SMM.prototype = {
         
           // get active nodes as objects
           $.each(path, function(i, obj) {
-            var node = $('#Node' + obj).find('circle').attr({'id':'Circle' + obj})[0];
+            var node = $('#Node' + self.removeSpecialChars(obj)).find('circle').attr({'id':'Circle' + obj})[0];
             nodes.push(node);
           });
         
@@ -250,7 +254,7 @@ SMM.prototype = {
             var nodes = self.sortArray([obj.edges[0], obj.edges[1]]);         
             var edge = nodes.join('') + obj.meta[1]['line'];
             
-            edges.push($('#Edge' + edge)[0]);                 
+            edges.push($('#Edge' + self.removeSpecialChars(edge))[0]);                 
             
           });
           
@@ -260,6 +264,7 @@ SMM.prototype = {
             animateElements.push(nodes[i]);  
             
             if (i < path.length - 1) {
+              console.log(edges[i]);
               animateElements.push(edges[i]);
             }
           }
