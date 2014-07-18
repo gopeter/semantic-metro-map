@@ -107,4 +107,4 @@ def index():
 ################################################################################
  
 if __name__ == '__main__':
-  app.run(DEBUG=True, PROPAGATE_EXCEPTIONS=True)
+  app.run(debug=True)
