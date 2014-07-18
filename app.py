@@ -6,11 +6,6 @@ import urllib
 from urlparse import urlparse
 from flask import Flask, jsonify, render_template, request
 from bs4 import BeautifulSoup
-from logentries import LogentriesHandler
-import logging
-
-log = logging.getLogger('logentries')
-log.setLevel(logging.INFO)
 
 mimetypes.add_type('image/svg+xml', '.svg')
 
@@ -107,4 +102,4 @@ def index():
 ################################################################################
  
 if __name__ == '__main__':
-  app.run(debug=True)
+  app.run()
