@@ -6,6 +6,17 @@ import urllib
 from urlparse import urlparse
 from flask import Flask, jsonify, render_template, request
 from bs4 import BeautifulSoup
+from logentries import LogentriesHandler
+import logging
+
+log = logging.getLogger('logentries')
+log.setLevel(logging.INFO)
+test = LogentriesHandler(LOGENTRIES_TOKEN)
+
+log.addHandler(test)
+
+log.warn("Warning message")
+log.info("Info message")
 
 mimetypes.add_type('image/svg+xml', '.svg')
 
