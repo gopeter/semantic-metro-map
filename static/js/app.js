@@ -118,7 +118,7 @@ SMM.prototype = {
     
       // get grouped svg element => 'g'
       var $parent = $(el.target).closest('g');
-      var node = $parent.find('circle')[0];
+      var node = $parent.find('path, circle')[0];
       lunar.toggleClass(node, 'active');
       
       var id = $parent.attr('id');
@@ -176,7 +176,7 @@ SMM.prototype = {
 
     var s = Snap('svg');    
     
-    $('#Nodes circle').each(function() {   
+    $('#Nodes circle, #Nodes path').each(function() {   
       if (lunar.hasClass($(this)[0], 'active')) {
         lunar.removeClass($(this)[0], 'active');          
       }
@@ -202,6 +202,10 @@ SMM.prototype = {
     $('#timetable').find('ol').empty();
     $('#timetable').find('strong span').empty();     
     $('#timetable').hide();
+    
+    setTimeout(function() {
+      $spinner.removeClass('show')
+    }, 500);    
     
     this.calculationDone = false;    
             
@@ -244,7 +248,7 @@ SMM.prototype = {
         
           // get active nodes as objects
           $.each(path, function(i, obj) {
-            var node = $('#Node' + self.removeSpecialChars(obj)).find('circle').attr({'id':'Circle' + obj})[0];
+            var node = $('#Node' + self.removeSpecialChars(obj)).find('circle, path').attr({'id':'Circle' + obj})[0];
             nodes.push(node);
           });
         

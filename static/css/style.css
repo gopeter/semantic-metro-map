@@ -120,11 +120,13 @@ header {
   overflow: scroll;
 }
 
-circle.active {
+circle.active,
+path.active {
 	fill: #ccc;
 }
 
 #Nodes circle,
+#Nodes path,
 #Edges line {
 	stroke-width: 2;
 	stroke-linecap: round;
